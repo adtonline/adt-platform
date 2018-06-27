@@ -1,0 +1,4 @@
+server:
+  port: 9191
+  contextPath: /auth
+security.basic.enabled: false

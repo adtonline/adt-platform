@@ -1,0 +1,28 @@
+buildscript {
+  repositories { mavenCentral() }
+  dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+jar {
+  baseName = 'adt-aurora'
+  version = version
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories { mavenCentral() }
+
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-security'
+  compile 'org.springframework.security.oauth:spring-security-oauth2'
+  compile project(':core')
+}
+
+bootRun {
+  systemProperties System.properties
+}
