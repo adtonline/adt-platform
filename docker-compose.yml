@@ -1,0 +1,7 @@
+elasticsearch:
+  image: elasticsearch:2.4.6
+  ports:
+    - 9200:9200
+  environment:
+    - "xpack.security.enabled=false"
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"

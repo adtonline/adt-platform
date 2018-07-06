@@ -1,0 +1,5 @@
+spring:
+  application.name: client-profile
+  cloud.config:
+    uri: http://config:9999
+    fail-fast: true
