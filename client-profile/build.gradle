@@ -20,6 +20,8 @@ repositories { mavenCentral() }
 dependencies {
   compile 'org.springframework.boot:spring-boot-starter-security'
   compile 'org.springframework.security.oauth:spring-security-oauth2'
+  compile "org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}"
+  compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${springCloudVersion}"
   compile project(':core')
 }
 

@@ -1,4 +1,4 @@
-package io.github.adt.profiles;
+package io.github.adt.profile;
 
 import java.util.List;
 

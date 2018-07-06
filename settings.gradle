@@ -10,7 +10,8 @@
 rootProject.name = 'adt'
 
 include 'core'
-include 'client-profile'
+include 'config'
 include 'auth'
+include 'client-profile'
 include 'mdm'
 include 'aurora'
