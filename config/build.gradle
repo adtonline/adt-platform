@@ -19,6 +19,7 @@ repositories { mavenCentral() }
 
 dependencies {
   compile "org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}"
+  compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springCloudVersion}"
   compile project(':core')
 }
 
