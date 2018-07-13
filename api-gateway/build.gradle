@@ -20,7 +20,6 @@ repositories { mavenCentral() }
 dependencies {
   compile "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}"
   compile "org.springframework.cloud:spring-cloud-starter-netflix-zuul:${springCloudVersion}"
-  compile project(":core")
 }
 
 bootRun {
