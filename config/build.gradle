@@ -3,12 +3,12 @@ buildscript {
   dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
 }
 
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
 
 jar {
-  baseName = 'config'
+  baseName = "config"
   version = version
 }
 
@@ -19,8 +19,6 @@ repositories { mavenCentral() }
 
 dependencies {
   compile "org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}"
-  compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springCloudVersion}"
-  compile project(':core')
 }
 
 bootRun {
