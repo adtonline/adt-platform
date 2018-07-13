@@ -7,11 +7,10 @@
  * in the user guide at https://docs.gradle.org/4.7/userguide/multi_project_builds.html
  */
 
-rootProject.name = 'adt'
+rootProject.name = "adt"
 
-include 'core'
-include 'config'
-include 'auth'
-include 'client-profile'
-include 'mdm'
-include 'aurora'
+include "core"
+include "api-gateway"
+include "service-discovery"
+include "config"
+include "client-profile"
