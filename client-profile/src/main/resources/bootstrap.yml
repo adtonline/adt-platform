@@ -2,4 +2,4 @@ spring:
   application.name: client-profile
   cloud.config:
     uri: http://localhost:9999
-    fail-fast: true
+    failFast: true
