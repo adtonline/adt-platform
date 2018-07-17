@@ -1,7 +1,29 @@
-elasticsearch:
-  image: elasticsearch:2.4.6
-  ports:
-    - 9200:9200
-  environment:
-    - "xpack.security.enabled=false"
-    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+version: "2"
+services:
+  elasticsearch:
+    image: elasticsearch:2.4.6
+    ports:
+      - 9200:9200
+    environment:
+      - "xpack.security.enabled=false"
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  config:
+    container_name: config
+    build: config
+    ports:
+      - 9999:9999
+  service-discovery:
+    container_name: service-discovery
+    build: service-discovery
+    ports:
+      - 9191:9191
+    depends_on:
+      - config
+  api-gateway:
+    container_name: api-gateway
+    build: api-gateway
+    ports:
+      - 9090:9090
+    depends_on:
+      - config
+      - service-discovery
