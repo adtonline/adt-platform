@@ -8,7 +8,7 @@ apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 
 jar {
-  baseName = "config"
+  baseName = "api-gateway"
   version = version
 }
 
@@ -18,7 +18,8 @@ targetCompatibility = 1.8
 repositories { mavenCentral() }
 
 dependencies {
-  compile "org.springframework.cloud:spring-cloud-config-server:${springCloudVersion}"
+  compile "org.springframework.cloud:spring-cloud-starter-netflix-zuul:${springCloudVersion}"
+  compile project(":core")
 }
 
 bootRun {

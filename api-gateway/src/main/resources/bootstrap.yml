@@ -1,5 +1,5 @@
 spring:
-  application.name: client-profile
+  application.name: api-gateway
   cloud.config:
     uri: http://localhost:9999
     failFast: true

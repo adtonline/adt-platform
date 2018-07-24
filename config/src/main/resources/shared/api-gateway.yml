@@ -1,0 +1,8 @@
+server.port: 9090
+
+zuul:
+  routes:
+    client-profile:
+      path: /client-profile/**
+      serviceId: client-profile
+      stripPrefix: false
